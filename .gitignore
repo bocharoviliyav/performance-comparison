@@ -1,10 +1,18 @@
 .idea/
 helidon/target/
 helidon/.idea/
+helidon/helidon.iml
 micronaut/target/
 micronaut/.idea/
+micronaut/micro.iml
 quarkus/target/
 quarkus/.idea/
-spring/target/
-spring/.idea/
+quarkus/quarkus.iml
+spring-boot/target/
+spring-boot/.idea/
+spring-boot/spring.iml
+golang/main
+golang/golang.iml
+prometheus/promdata/data
+pg/pgdata/data
 
