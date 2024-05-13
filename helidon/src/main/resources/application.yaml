@@ -1,0 +1,12 @@
+server:
+  port: 8080
+javax:
+  sql:
+    DataSource:
+      person:
+        dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+        dataSource:
+          url: jdbc:postgresql://172.17.0.1:5432/db
+#          url: jdbc:postgresql://127.0.0.1:5432/db
+          user: myuser
+          password: secret
