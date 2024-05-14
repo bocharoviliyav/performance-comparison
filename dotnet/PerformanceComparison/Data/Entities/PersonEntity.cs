@@ -11,15 +11,15 @@ public sealed class PersonEntity
     [Column("id")]
     public int Id { get; init; }
 
-    [Column("name")] 
+    [Column("name")]
     public required string Name { get; init; }
 
-    [Column("address1")] 
+    [Column("address1")]
     public required string Address1 { get; init; }
 
-    [Column("address2")] 
+    [Column("address2")]
     public required string Address2 { get; init; }
 
-    [Column("city")] 
+    [Column("city")]
     public required string City { get; init; }
 }

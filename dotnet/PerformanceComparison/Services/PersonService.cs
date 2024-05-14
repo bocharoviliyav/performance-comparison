@@ -16,14 +16,14 @@ public sealed class PersonService(IDbContextFactory<ApplicationDbContext> contex
     {
         await using var context = await contextFactory.CreateDbContextAsync(cancellationToken);
         await using var transaction = await context.Database.BeginTransactionAsync(cancellationToken);
-        
+
         try
         {
             var entity = await context.Persons.FirstOrDefaultAsync(x => x.Id == person.Id, cancellationToken: cancellationToken);
             var result = entity is null
                 ? (await context.Persons.AddAsync(person, cancellationToken)).Entity
                 : context.Persons.Update(person).Entity;
-            
+
             await transaction.CommitAsync(cancellationToken);
             return result;
         }

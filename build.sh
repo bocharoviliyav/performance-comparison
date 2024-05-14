@@ -17,3 +17,6 @@ cd ../quarkus &&  docker build -t quarkus:1.0 -f ./Dockerfile .
 
 echo "Building Golang..."
 cd ../golang && docker build -t golang:1.0  -f ./Dockerfile .
+
+echo "Building Golang..."
+cd ../dotnet && docker build -t dotnet:1.0 -f ./Dockerfile .
