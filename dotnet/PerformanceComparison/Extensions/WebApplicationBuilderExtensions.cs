@@ -7,6 +7,13 @@ namespace PerformanceComparison.Extensions;
 
 public static class WebApplicationBuilderExtensions
 {
+    public static WebApplicationBuilder AddLogging(this WebApplicationBuilder builder)
+    {
+        builder.Logging.ClearProviders();
+        
+        return builder;
+    }
+    
     public static WebApplicationBuilder AddDatabase(this WebApplicationBuilder builder)
     {
         var dataSourceBuilder = new NpgsqlDataSourceBuilder(

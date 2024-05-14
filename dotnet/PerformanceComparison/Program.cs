@@ -1,4 +1,5 @@
 var builder = WebApplication.CreateSlimBuilder(args)
+    .AddLogging()
     .AddDatabase()
     .AddServices();
 
