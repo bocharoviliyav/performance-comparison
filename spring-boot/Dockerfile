@@ -14,7 +14,7 @@ WORKDIR /spring
 
 ADD pom.xml .
 ADD src src
-RUN mvn package -DskipTests
+RUN --mount=type=cache,target=/root/.m2 mvn package -DskipTests
 
 FROM azul/zulu-openjdk:21-jre
 WORKDIR /spring

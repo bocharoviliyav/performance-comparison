@@ -15,4 +15,5 @@ golang/main
 golang/golang.iml
 prometheus/promdata/data
 pg/pgdata/data
+*.iml
 

@@ -21,11 +21,6 @@ public class PersonController {
     this.personService = personService;
   }
 
-  @Get
-  public String hello() {
-    return "Hello from Micronaut!";
-  }
-
   @Get("/{id}")
   public Person getPerson(@PathVariable Integer id) {
     return personService.findById(id);

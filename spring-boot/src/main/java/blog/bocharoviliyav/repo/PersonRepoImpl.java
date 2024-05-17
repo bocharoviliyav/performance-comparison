@@ -14,16 +14,12 @@ public class PersonRepoImpl implements PersonRepo {
 
   @Transactional
   public Person createOrUpdate(Person person) {
-    if (person.getId() == null) {
-      this.entityManager.persist(person);
-      return person;
-    } else {
-      return this.entityManager.merge(person);
-    }
+    entityManager.merge(person);
+    return person;
   }
 
   public Person findById(Integer id) {
-    return this.entityManager.find(Person.class, id);
+    return entityManager.find(Person.class, id);
   }
 
 }

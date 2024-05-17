@@ -18,7 +18,7 @@ public class PersonRepoImpl implements PersonRepo {
   @Override
   @Transactional
   public Person createOrUpdate(Person person) {
-    entityManager.persist(person);
+    entityManager.merge(person);
     return person;
   }
 
