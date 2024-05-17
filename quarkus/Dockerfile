@@ -13,10 +13,10 @@ RUN set -x && \
 WORKDIR /quarkus
 
 ADD pom.xml .
-RUN mvn install -DskipTests
+RUN --mount=type=cache,target=/root/.m2 mvn install -DskipTests
 
 ADD src src
-RUN mvn package -DskipTests
+RUN --mount=type=cache,target=/root/.m2 mvn package -DskipTests
 
 FROM azul/zulu-openjdk:21-jre
 WORKDIR /quarkus

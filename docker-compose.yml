@@ -7,6 +7,14 @@ services:
       - liquibase
     ports:
       - "8084:8080"
+  dotnet:
+    image: dotnet:1.0
+    #    platform: linux/amd64
+    container_name: dotnet
+    depends_on:
+      - liquibase
+    ports:
+      - "8085:8080"
   micronaut:
     image: micronaut:1.0
 #    platform: linux/amd64
